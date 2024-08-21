@@ -10,7 +10,16 @@ interface Env {}
 type Cloudflare = Omit<PlatformProxy<Env>, "dispose">;
 
 declare module "@remix-run/cloudflare" {
-	interface AppLoadContext {
-		cloudflare: Cloudflare;
-	}
+	// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+	interface AppLoadContext extends Awaited<ReturnType<typeof getLoadContext>> {}
 }
+
+export const getLoadContext = ({
+	context: { cloudflare },
+}: {
+	context: { cloudflare: Cloudflare };
+}) => {
+	return {
+		cloudflare,
+	};
+};
