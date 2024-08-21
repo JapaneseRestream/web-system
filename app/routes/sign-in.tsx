@@ -1,4 +1,4 @@
-import { Link } from "@remix-run/react";
+import { Form, Link } from "@remix-run/react";
 
 import { Button } from "~/shadcn/components/ui/button";
 import {
@@ -16,13 +16,16 @@ export default function SignInPage() {
 					<CardTitle className="text-2xl">ログイン</CardTitle>
 				</CardHeader>
 				<CardContent className="grid gap-4">
-					<Button className="w-full">Discordでログイン</Button>
-					<Link
-						to="/sign-in-with-email"
-						className="text-center text-sm underline"
-					>
-						メールアドレスでログイン
-					</Link>
+					<Form method="post" action="/authentication/discord">
+						<Button type="submit" className="w-full">
+							Discordでログイン
+						</Button>
+					</Form>
+					<div className="text-center text-sm">
+						<Link to="/sign-in-with-email" className="underline">
+							メールアドレスでログイン
+						</Link>
+					</div>
 					<div className="text-center text-sm">
 						初めての方は
 						<Link to="/sign-up" className="underline">

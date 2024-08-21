@@ -7,3 +7,25 @@ compatibility_date = "2024-08-21"
 [vars]
 NODE_VERSION = "20.16.0"
 PNPM_VERSION = "9.5.0"
+
+[[kv_namespaces]]
+binding = "KV_SESSION"
+id = "ca0f89311e7f494b847cb818e27607e5"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "dev-japanese-restream-web-system"
+database_id = "100ceeea-fbe0-4047-9cda-58ba30bece1d"
+
+[env.production.vars]
+NODE_VERSION = "20.16.0"
+PNPM_VERSION = "9.5.0"
+
+[[env.production.kv_namespaces]]
+binding = "KV_SESSION"
+id = "ed6d557ca675404bb82420ced2412106"
+
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "prod-japanese-restream-web-system"
+database_id = "585cc70e-864e-466d-9939-890b678ccf58"
