@@ -19,13 +19,14 @@ import {
 	useTheme,
 } from "remix-themes";
 
-import { Button } from "./components/ui/button";
+import { Button } from "~/shadcn/components/ui/button";
 import {
 	DropdownMenu,
 	DropdownMenuContent,
 	DropdownMenuItem,
 	DropdownMenuTrigger,
-} from "./components/ui/dropdown-menu";
+} from "~/shadcn/components/ui/dropdown-menu";
+
 import { themeSessionResolver } from "./lib/theme-storage.server";
 
 export const meta: MetaFunction = () => [

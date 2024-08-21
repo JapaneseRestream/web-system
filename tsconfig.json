@@ -10,7 +10,7 @@
     "moduleResolution": "Bundler",
     "baseUrl": "./",
     "paths": {
-      "~/*": ["./app/*"]
+      "~/shadcn/*": ["./shadcn/*"]
     },
     "types": ["@remix-run/cloudflare", "vite/client"],
 

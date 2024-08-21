@@ -3,7 +3,7 @@ import tailwindAnimate from "tailwindcss-animate";
 
 const config = {
 	darkMode: ["class"],
-	content: ["./app/**/*.{ts,tsx}"],
+	content: ["./app/**/*.{ts,tsx}", "./shadcn/**/*.{ts,tsx}"],
 	prefix: "",
 	theme: {
 		container: {
