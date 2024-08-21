@@ -89,14 +89,14 @@ function ThemeToggle() {
 						setTheme(Theme.LIGHT);
 					}}
 				>
-					Light
+					ライト
 				</DropdownMenuItem>
 				<DropdownMenuItem
 					onClick={() => {
 						setTheme(Theme.DARK);
 					}}
 				>
-					Dark
+					ダーク
 				</DropdownMenuItem>
 			</DropdownMenuContent>
 		</DropdownMenu>
