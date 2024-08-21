@@ -31,5 +31,6 @@
     "noPropertyAccessFromIndexSignature": true,
 
     "skipLibCheck": true
-  }
+  },
+  "include": ["./**/*.ts", "./**/*.tsx"]
 }
