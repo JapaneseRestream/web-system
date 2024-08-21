@@ -32,6 +32,7 @@ import { themeSessionResolver } from "./lib/theme-storage.server";
 export const meta: MetaFunction = () => [
 	{ charSet: "utf-8" },
 	{ name: "viewport", content: "width=device-width, initial-scale=1" },
+	{ title: "Japanese Restream" },
 ];
 
 export async function loader({ request }: LoaderFunctionArgs) {
@@ -105,10 +106,13 @@ function ThemeToggle() {
 export default function App() {
 	return (
 		<>
-			<header className="sticky bg-accent flex">
-				<h1>
+			<header className="sticky bg-accent flex items-center">
+				<h1 className="m-2 grow">
 					<Link to="/">Japanese Restream</Link>
 				</h1>
+				<Button asChild className="m-2">
+					<Link to="/sign-in">ログイン</Link>
+				</Button>
 				<ThemeToggle />
 			</header>
 			<Outlet />

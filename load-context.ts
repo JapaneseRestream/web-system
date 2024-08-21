@@ -12,7 +12,5 @@ export const getLoadContext = ({
 }: {
 	context: { cloudflare: Cloudflare };
 }) => {
-	return {
-		cloudflare,
-	};
+	return { cloudflare };
 };
