@@ -2,6 +2,7 @@ import "./tailwind.css";
 
 import type { LoaderFunctionArgs, MetaFunction } from "@remix-run/cloudflare";
 import {
+	Link,
 	Links,
 	Meta,
 	Outlet,
@@ -25,7 +26,7 @@ import {
 	DropdownMenuItem,
 	DropdownMenuTrigger,
 } from "./components/ui/dropdown-menu";
-import { themeSessionResolver } from "./lib/theme-session-storage.server";
+import { themeSessionResolver } from "./lib/theme-storage.server";
 
 export const meta: MetaFunction = () => [
 	{ charSet: "utf-8" },
@@ -104,7 +105,9 @@ export default function App() {
 	return (
 		<>
 			<header className="sticky bg-accent flex">
-				<h1>Japanese Restream</h1>
+				<h1>
+					<Link to="/">Japanese Restream</Link>
+				</h1>
 				<ThemeToggle />
 			</header>
 			<Outlet />
